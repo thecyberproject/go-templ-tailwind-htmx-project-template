@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"website/routes"
 	"website/utils"
 
 	"github.com/gin-gonic/gin"
@@ -14,8 +15,8 @@ var (
 	Buildtime string
 )
 
-// @title           SOARCA-GUI
-// @version         0.0.1
+// @title           website
+// @version         0.0.0
 func main() {
 	errenv := godotenv.Load(".env")
 
@@ -24,7 +25,7 @@ func main() {
 	}
 
 	app := gin.Default()
-	//routes.Setup(app)
+	routes.Setup(app)
 
 	listeningPort := utils.GetEnv("PORT", "8081")
 	url := fmt.Sprintf("localhost:%s", listeningPort)
