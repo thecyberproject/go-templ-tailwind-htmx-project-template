@@ -8,7 +8,7 @@ LABEL MAINTAINER Author maarten de kruijf, RabbITCybErSeC
 ARG BINARY_NAME=tcp-website
 ARG VERSION
 
-COPY bin/${BINARY_NAME}-${VERSION}-linux-amd64 /bin/soarca-gui
+COPY bin/${BINARY_NAME}-${VERSION}-linux-amd64 /bin/${BINARY_NAME}
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
 WORKDIR /bin
