@@ -25,6 +25,17 @@ rm -r .github
 echo "You are good to go"
 ```
 
+when developing you can use the following commands:
+
+```bash 
+make dev
+```
+Altough the features of the GoTTH stack are amazing, they are not perfect yet. So you needs to run in a seperate Window the command below to ensure changes are also picked up by Tailwind.
+
+```bash
+make dev-tailwind
+```
+
 ## Requirements 
 
 Install the following:
